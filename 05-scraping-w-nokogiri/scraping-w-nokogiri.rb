@@ -29,10 +29,12 @@ parsed_html = Nokogiri::HTML(html)
 alumni_elements = parsed_html.css(".text-block.util__margin-bm")
 
 alumni_elements.each do |element|
-  puts element.text
+  Alumni.new(element.text)
 end
 
-# Alumni.all
+Alumni.all.each do |alumni|
+  puts alumni.name
+end
 
 #https://www.w3schools.com/cssref/css_selectors.asp
 #two ways to grab elements by their css
