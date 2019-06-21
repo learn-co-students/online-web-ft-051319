@@ -1,0 +1,9 @@
+#ENV["SINATRA_ENV"] ||= "development"
+#environment global variable Ruby -- LOOK IT UP!
+
+require_relative './config/environment'
+require 'sinatra/activerecord/rake'
+
+task :console do
+  Pry.start
+end
