@@ -1,0 +1,9 @@
+<h1> All the movies in my database: </h1>
+<% @movies.each do |movie| %>
+  <h3>Title: <%=  movie.title %></h3>
+  Description: <%= movie.description %><br/>
+  Gross: <%= movie.gross %><br/>
+  Rating: <%= movie.rating %><br/>
+  Director: <a href="/directors/7"><%= movie.director.name %><br/></a>
+  Genre: <%= movie.genre.name %>
+<% end %>
