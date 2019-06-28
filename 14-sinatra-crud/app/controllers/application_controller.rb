@@ -4,12 +4,8 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
   end
 
-  # get '/' do
-  #   erb :home
-  # end
-
-  get '/sayhellotochris' do
-    erb :hichris
+  get '/' do
+    erb :home
   end
 
 end

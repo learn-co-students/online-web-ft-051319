@@ -1,0 +1,19 @@
+<h1>Edit <%= @movie.title %>!</h1>
+
+<form action="/movies/<%= @movie.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <label for="title">Title:</label>
+  <input type="text" name="movie[title]" value="<%= @movie.title %>"><br>
+  <label for="description">Description:</label>
+  <input type="text" name="movie[description]" value="<%= @movie.description %>"><br>
+  <label for="gross">Gross:</label>
+  <input type="text" name="movie[gross]" value="<%= @movie.gross %>"><br>
+  <label for="rating">Rating:</label>
+  <input type="text" name="movie[rating]" value="<%= @movie.rating %>"><br>
+  <input type="submit" value="Edit <%= @movie.title %>!!!">
+</form>
+<br>
+<form action="/movies/<%= @movie.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete <%= @movie.title %>!!!">
+</form>

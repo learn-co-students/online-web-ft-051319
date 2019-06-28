@@ -1,0 +1,12 @@
+<h1> All the directors in my database: </h1>
+
+<% @directors.each do |director| %>
+  <li>
+    <a href="/directors/<%= director.id %>">
+      <%= director.name %>
+    </a>
+  </li>
+<% end %>
+<br>
+<br>
+<a href="/directors/new">Make a new director</a>

@@ -1,0 +1,6 @@
+<h1> All the movies in my database: </h1>
+<% @movies.each do |movie| %>
+  <li><a href="/movies/<%= movie.id %>"><%=  movie.title %></a></li>
+<% end %>
+<br>
+<a href="/movies/new">Make a new movie</a>

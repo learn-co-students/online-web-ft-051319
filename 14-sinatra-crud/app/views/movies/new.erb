@@ -1,0 +1,19 @@
+<h1>Make a new movie!</h1>
+
+<form action="/movies" method="post">
+  <label for="title">Title:</label>
+  <input type="text" name="movie[title]" value=""><br>
+  <label for="description">Description:</label>
+  <input type="text" name="movie[description]" value=""><br>
+  <label for="gross">Gross:</label>
+  <input type="text" name="movie[gross]" value=""><br>
+  <label for="rating">Rating:</label>
+  <input type="text" name="movie[rating]" value=""><br>
+  <label for="director_id">Director:</label>
+  <select name="movie[director_id]">
+    <% @directors.each do |director| %>
+      <option value="<%= director.id %>"><%= director.name %></option>
+    <% end %>
+  </select><br>
+  <input type="submit" value="Make That Movie!!!">
+</form>
