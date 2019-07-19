@@ -1,0 +1,11 @@
+<%= form_for(@student) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :grade %>
+  <%= f.number_field :grade %>
+  <%= f.label :teacher %>
+  <%= f.text_field :teacher %>
+  <%= f.label :honors %>
+  <%= f.radio_button :honors, 'true' %>
+  <%= f.submit %>
+<% end %>
