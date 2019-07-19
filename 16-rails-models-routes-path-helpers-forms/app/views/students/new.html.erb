@@ -1,0 +1,12 @@
+<h1>Make a new student</h1>
+
+<%= form_tag(students_path) do %>
+  <%= label_tag("Name:") %>
+  <%= text_field(:user, :name) %>
+  <%= label_tag("Teacher:") %>
+  <%= text_field(:user, :teacher) %>
+  <%= label_tag("Age:") %>
+  <%= number_field(:user, :age) %>
+  <%= label_tag("Honors:") %>
+  <%= radio_button_tag(:user, :honors) %>
+<% end %>
