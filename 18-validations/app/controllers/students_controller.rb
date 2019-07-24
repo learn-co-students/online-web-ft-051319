@@ -20,9 +20,12 @@ class StudentsController < ApplicationController
   end
 
   def create
+    #use .new to make an instance but not save it
     @student = Student.new(student_params)
     if @student.valid?
+      #.valid? runs validations
       @student.save
+      #.save saves
       redirect_to @student
       #Sinatra Way
       #redirect_to "/students/#{student.id}"
@@ -30,6 +33,8 @@ class StudentsController < ApplicationController
       #redirect_to student_path(student or student.id)
       #Powerful Rails way
     else
+      #we needed to make the variable above an instance variable so we could pass it to this view in case of errors.
+      #notice this is not a redirect
       render :new
     end
   end
@@ -42,8 +47,11 @@ class StudentsController < ApplicationController
   def update
         # @student = Student.find(params[:id]) being called in before_action
     if @student.update(student_params)
+      #.update will not pass this IF statement if there are rrors. 
       redirect_to @student
     else
+      #we needed to make the variable above an instance variable so we could pass it to this view in case of errors.
+      #notice this is not a redirect
       render :edit
     end
   end
