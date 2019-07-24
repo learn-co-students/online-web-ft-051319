@@ -1,0 +1,17 @@
+<%= form_for(@student) do |f| %>
+  <% if @student.errors.any? %>
+    <% @student.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  <% end %>
+  <br/>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :grade %>
+  <%= f.number_field :grade %>
+  <%= f.label :teacher %>
+  <%= f.text_field :teacher %>
+  <%= f.label :honors %>
+  <%= f.radio_button :honors, 'true' %>
+  <%= f.submit %>
+<% end %>
