@@ -1,0 +1,21 @@
+<h1>Make A New Team!</h1>
+
+<!-- Make a form for a team that also has a form within it that creates two players-->
+
+<%= form_for @team do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :mascot %>
+  <%= f.text_field :mascot %>
+  <h3>! A Team Needs 2 Players To Start!</h2>
+  <p>Create them here:</p>
+  <%= f.fields_for :players do |pf| %>
+    <%= pf.label :name %>
+    <%= pf.text_field :name %>
+    <br>
+  <% end %>
+  <br>
+  <br>
+  <%= f.submit %>
+<% end %>
