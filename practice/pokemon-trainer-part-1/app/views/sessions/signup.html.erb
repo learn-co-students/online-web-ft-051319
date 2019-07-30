@@ -1,0 +1,35 @@
+<h1>Sign Up To Be A Pokemon Trainer</h1>
+<%= form_for @trainer, url: create_user_path do |f| %>
+  <%= f.label :name %>
+  <br>
+  <%= f.text_field :name %>
+  <br><br>
+  <%= f.label :location %>
+  <br>
+  <%= f.text_field :location %>
+  <br><br>
+  <%= f.label :age %>
+  <br>
+  <%= f.number_field :age %>
+  <br><br>
+  <%= f.label :level %>
+  <br>
+  <%= f.select :level, ["Newbie", "Novice", "Pro"] %>
+  <br><br>
+  <%= f.fields_for :capture do |capture_field| %>
+    <%= f.label "Select Your First Pokemon" %>
+    <br>
+    <%= capture_field.collection_select :pokemon_id, @starter_pokemon, :id, :name %>
+    <br><br>
+    <%= capture_field.label "Name it!" %>
+    <br>
+    <%= capture_field.text_field :name %>
+    <br><br>
+    <%= capture_field.hidden_field :hp, value: 50 %>
+  <% end %>
+  <%= f.label :password %>
+  <br>
+  <%= f.password_field :password %>
+  <br><br>
+  <%= f.submit "Start Your Journey!"%>
+<% end %>

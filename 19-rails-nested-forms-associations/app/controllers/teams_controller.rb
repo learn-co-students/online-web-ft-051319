@@ -11,11 +11,12 @@ class TeamsController < ApplicationController
   def new
     # byebug
     @team = Team.new
-    params[:forms].to_i.times do
-      @team.players.build
-    end
+    @team.players.build(name: "Tony")
+    @team.players.build(name: "Montensia")
+    byebug
+    # params[:forms].to_i.times do
+    #   @team.players.build
     #the instance held in the @team variable now has two empty Player instances associated with it, and our form will be able to see them by calling @team.players and rendering the correct amount of form fields
-    # byebug
   end
 
   def create

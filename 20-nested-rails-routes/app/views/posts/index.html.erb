@@ -1,0 +1,12 @@
+<% if @category %>
+  <h1>Posts For <%= @category.name %></h1>
+<% else %>
+  <h1>All Posts</h1>
+<% end %>
+
+<% @posts.each do |post| %>
+  Title: <%= post.title %>
+  <br>
+  Body : <%= post.body %>
+  <br><br>
+<% end %>

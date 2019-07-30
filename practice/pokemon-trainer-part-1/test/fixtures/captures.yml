@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pokemon: 
+  trainer: 
+  name: MyString
+  hp: 1
+
+two:
+  pokemon: 
+  trainer: 
+  name: MyString
+  hp: 1

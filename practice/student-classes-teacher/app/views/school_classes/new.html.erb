@@ -1,0 +1,9 @@
+<%= form_for @school_class do |f| %>
+  Student list:<%=f.collection_select :student_id, @students, :id, :name %>
+  Teacher list:<%=f.collection_select :teacher_id, @teachers, :id, :name %>
+  <%= f.label :subject %>
+  <%= f.text_field :subject %>
+  <%= f.label :hour %>
+  <%= f.number_field :hour %>
+  <%= f.submit %>
+<% end %>
