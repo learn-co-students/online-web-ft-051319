@@ -26,6 +26,8 @@ console.log("CATEGORIES DIV", categoriesDiv);
 
 //Iterating over all headlines and adding them
 
+
+//Step 2: Create elements for each headline/category and append to the correct DOM element
 headlines.forEach(function(headline){
   let headlineObject = document.createElement("h3")
   headlineObject.innerText = headline
