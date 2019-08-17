@@ -28,7 +28,8 @@ function handleAddEmojiAreaClick(e){
     let inputField = document.getElementById("input")
     let inputEmoji = inputField.value
     emojiBank.innerHTML += `<li>${inputEmoji}</li>`
-    addEmojiArea.innerHTML = addButton
+    addEmojiArea.innerHTML = addButton.outerHTML
+    //use outerHTML instead of inner
   }
 
 }
