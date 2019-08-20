@@ -34,7 +34,7 @@ addBtn.addEventListener('click', () => {
 //and then we refactored so needed to define it elsewhere
 //regular methods are defined after the function keyword
 //ex function myFunc(){code here}
-//or are anyonymous without ne name
+//or are anyonymous without a name
 // ex function(){code here}
 //arrow functions need to be saved to a variable
 // ex const myFunc = () => code here
