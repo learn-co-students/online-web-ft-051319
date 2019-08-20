@@ -26,6 +26,7 @@ addBtn.addEventListener('click', () => {
 //above is event listener with arrow function callback definition
 //below is even listener with regular function callback definition
 //just for you to see the difference
+
 //when functions aren't given a name/variable, they're called anonymous
 //we usually use anonymous functions when they only need to be used in one situation
 //once we see that functions SHOULD be used, OR a refactor is necessary, we define them
