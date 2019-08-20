@@ -38,8 +38,7 @@ addBtn.addEventListener('click', () => {
 // ex function(){code here}
 //arrow functions need to be saved to a variable
 // ex const myFunc = () => code here
-// anonymously they do not need to be saved to a variable
-// but can only be written anonymously where a definition is required
+// they can only be written anonymously where a definition is required
 // for example, the callback in the event listener above
 
 submitButton.addEventListener('click', function(event){
