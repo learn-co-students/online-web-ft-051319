@@ -2,6 +2,7 @@
 let addEmojiArea = document.getElementById("add-emoji-area")
 let addButton = document.getElementById("add-button")
 let emojiBank = document.getElementById("emoji-bank")
+const emojis = document.getElementsByClassName("emoji")
 // console.log("AddEmojiArea", addEmojiArea)
 // console.log("Add Button", addButton)
 console.log("Emoji Bank", emojiBank)
@@ -27,7 +28,7 @@ function handleAddEmojiAreaClick(e){
     e.preventDefault()
     let inputField = document.getElementById("input")
     let inputEmoji = inputField.value
-    emojiBank.innerHTML += `<li>${inputEmoji}</li>`
+    emojiBank.innerHTML += `<li class="emoji">${inputEmoji}</li>`
     addEmojiArea.innerHTML = addButton.outerHTML
     //use outerHTML instead of inner
   }
