@@ -3,10 +3,10 @@
 * Go over Fetch and review of HTTP requests/responses
   * GET, POST, PUT/PATCH, DELETE - same as Rails! :D
 * Define a Promise
- * https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e77261
- * Promises allow us to make asynchronous requests
- * "A promise is an object that may produce a single value some time in the future."
- * Information received in a promise can only be handled within a promise
+  * https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e77261
+  * Promises allow us to make asynchronous requests
+  * "A promise is an object that may produce a single value some time in the future."
+  * Information received in a promise can only be handled within a promise
 
 * Review JSON format
   * https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en
