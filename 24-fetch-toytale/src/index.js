@@ -62,8 +62,10 @@ submitButton.addEventListener('click', function(event){
       "Content-Type": "application/json",
       Accept: "application/json"
     },
+    //when we send information, we need to stringify it
     body: JSON.stringify(newToyObj)
   })
+  //when we receive information, we need to jsonify it
   .then(res => res.json())
   //the server returned the successfully made object, and THAT'S what we want to render to the dom
   //Pessimistic way of rendering
