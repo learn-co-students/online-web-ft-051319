@@ -69,9 +69,9 @@ submitButton.addEventListener('click', function(event){
   .then(res => res.json())
   //the server returned the successfully made object, and THAT'S what we want to render to the dom
   //Pessimistic way of rendering
-  .then((newToyObj) => {
+  .then((newToyFromDB) => {
     // console.log(res);
-    putToysOnDom([newToyObj])
+    putToysOnDom([newToyFromDB])
     window.scrollTo(0,document.body.scrollHeight);
   })
 
