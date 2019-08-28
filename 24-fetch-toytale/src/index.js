@@ -94,6 +94,31 @@ function putToysOnDom(toyObjArray){
   })
 }
 
+//PUT EVENT LISTENER ON ENTIRE DIV, NOT INDIVIDUAL BUTTONS
+toyCollection.addEventListener('click', handleLike)
+
+function handleLike(event){
+  if(event.target.className == "like-btn"){
+    //1. Grab the previous element that holds the likes
+    let likesTag = event.target.previousElementSibling
+    //2. Create variable with new like count
+    let likes = parseInt(likesTag.innerText.split(" ")[0]) + 1
+    //3. Optimisitcally render new like count on DOM
+    likesTag.innerText = likes + " Likes"
+    //4. Send PATCH request
+    fetch("http://localhost:3000/toys/" + event.target.dataset.toyid, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: JSON.stringify({
+        "likes": likes
+      })
+    })
+  }
+}
+
 //arrow function way:
 //*big difference is really in the first line with longer functions
 // const putToysOnDom = (toyObjArray) => {
