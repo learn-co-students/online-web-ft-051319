@@ -1,14 +1,15 @@
-
+//
 // let charlie = {
 //   name: "Charlie",
 //   foodAmount: 0,
 //   breed: "Lab",
 //   owner: "Chris",
-//   feedMe: function(amount){
+//   feedMe: (amount) => {
 //     this.foodAmount += amount
 //     console.log(this, foodAmount);
-//   }.bind(this)
+//   }
 // }
+
 //
 // let mango = {
 //   name: "Mango",
@@ -76,8 +77,7 @@ class Dog extends Animal {
     super(name, age)
     this.breed = breed
     this.owner = owner
-    // this.favTreats = treats
-    this.walks = 0
+    this.favTreats = ["Peanut Butter", "Bones"]
   }
 
   addTreat(treat){
@@ -85,27 +85,29 @@ class Dog extends Animal {
   }
 
   eatTreats(){
-    this.favTreats.forEach(treat => {
+    this.favTreats.forEach((treat) =>  {
+     console.log(this);
      console.log(this.name + " is eating " + treat);
     })
+  }
+
+  havePuppy(name, age, breed, owner){
+    let puppy = new Dog(name, age, breed, owner)
+    puppy.whoIsMom = () => {
+      console.log(this.name + " is the mom!")
+    }
+    return puppy
   }
     //this normal function as a callback doesn't work because
     //the execution context is lost, the method isn't being called on a definite object
     // this.favTreats.forEach(function(treat){
     //   console.log(this);
     //   console.log(this.name + " is eating " + treat);
-  havePuppy(){
-    let puppy = new Dog("Dougie", 0, "Pug", "Chris")
-    puppy.whoIsMom = function() {
-      console.log(this);
-      console.log(this.name)
-    }
-    return puppy
-  }
 }
 
 let dog1 = new Dog("Mango", 2, "Lab", "Chris")
-let puppy = dog1.havePuppy()
+let puppy = dog1.havePuppy("Chip", 0, "Pug", "Chris")
+puppy.whoIsMom()
 
 // class DogWalker {
 //   constructor(name){

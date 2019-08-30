@@ -83,7 +83,7 @@ submitButton.addEventListener('click', function(event){
 function putToysOnDom(toyObjArray){
   console.log("Rendered to DOM");
   toyObjArray.forEach(toyObj => {
-    toyCollection.innerHTML += `<div class="card">
+    toyCollection.innerHTML += `<div data-toyid=${toyObj.id} class="card">
       <h2>${toyObj.name}</h2>
       <img src=${toyObj.image} class="toy-avatar" />
       <p>${toyObj.likes} Likes </p>
