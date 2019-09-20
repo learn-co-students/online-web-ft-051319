@@ -8,11 +8,9 @@ body {
   width: 1000px;
   margin: auto;
   margin-top: 50px;
-  border: 5px dashed black;
 }
 
 #header {
-  border: 2px solid blue;
   text-align: center;
 }
 
@@ -30,14 +28,14 @@ body {
   margin: auto;
 }
 
-#pokemon-container {
-  border: 2px solid green;
-  width: 1000px;
-  margin: auto;
-}
-
 input:focus {
   outline: none;
+}
+
+.pokemon-container {
+  float: left;
+  width: 250px;
+  margin: auto;
 }
 
 .pokemon-div {
@@ -48,7 +46,6 @@ input:focus {
   background:#fecd2f;
   color:#2d72fc;
   font-size: 30px;
-  border: 2px solid pink;
 }
 
 .center-text {

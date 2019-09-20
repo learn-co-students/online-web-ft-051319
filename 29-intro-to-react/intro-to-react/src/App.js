@@ -1,7 +1,7 @@
 import React from 'react';
+import logo from './logo.svg';
 import './App.css';
 
-//Components
 import Header from './Header'
 import Container from './Container'
 
