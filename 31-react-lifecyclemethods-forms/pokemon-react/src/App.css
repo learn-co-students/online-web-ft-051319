@@ -1,0 +1,56 @@
+body {
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande',
+    sans-serif;
+  font-weight: 300;
+}
+
+#app {
+  width: 1000px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+#header {
+  text-align: center;
+}
+
+#search-input {
+  width: 500px;
+  margin: 20px auto;
+  font-size: 3rem;
+  border: 3px solid #fecd2f;
+  color: #2d72fc;
+}
+
+#logo {
+  width: 300px;
+  display: block;
+  margin: auto;
+}
+
+#pokemon-container {
+  width: 1200px;
+  margin: auto;
+}
+
+input:focus {
+  outline: none;
+}
+
+.pokemon-div {
+  display: inline-block;
+  text-align: center;
+  width:225px;
+  margin:10px;
+  background:#fecd2f;
+  color:#2d72fc;
+  font-size: 30px;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.flip-image {
+  color: #2d72fc;
+}
