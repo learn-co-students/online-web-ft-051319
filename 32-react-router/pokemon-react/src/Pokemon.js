@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 
 //functional component
 //presentational components
@@ -15,9 +16,6 @@ import React, { Component } from 'react'
 //class syntax React Component
 //AKA Smart Components
 class Pokemon extends Component {
-  constructor(props){
-    super(props)
-  }
 
   state = {forward: true}
 
@@ -40,7 +38,11 @@ class Pokemon extends Component {
 
     return(
       <div className="pokemon-div">
-        <div id={this.props.id}>{this.props.name}</div>
+        <div id={this.props.id}>
+          <Link to={"/pokemon/" + this.props.name}>
+            {this.props.name}
+          </Link>
+        </div>
         <img onClick={this.flipPokemon} src={this.state.forward ? this.props.front : this.props.back}/>
       </div>
     )

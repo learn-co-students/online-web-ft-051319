@@ -16,18 +16,20 @@ class Fundraiser {
   }
 }
 
-class Volunteer {
-  constructor(name){
-    this.name = name
+class Component {
+  constructor(props){
+    this.props = props
   }
 }
 
-let chris = new Volunteer("Chris")
-let school = new Fundraiser("School Fundraiser")
 
-school.recruitVolunteer(chris)
 
-console.log(chris);
+// let chris = new Volunteer("Chris")
+// let school = new Fundraiser("School Fundraiser")
+//
+// school.recruitVolunteer(chris)
+//
+// console.log(chris);
 
 
 
