@@ -44,6 +44,7 @@ let reducer = (state, action) => {
     case "Dime":
       return {...state, dimes: state.dimes + 1};
   }
+}
 
 const storeForCoinSorter = redux(coinState, reducer)
 //redux is just a function that generates stores. So let's generate a store for this particular app and then save it to a variable to use in our application
