@@ -23,10 +23,7 @@ const redux = (initialState, reducer) => {
 
 //Let's define our initial state
 let coinState = {
-  quarters: 0,
-  nickels: 0,
-  pennies: 0,
-  dimes: 0
+  total: 0.00
 }
 
 //Let's define our reducer
@@ -36,13 +33,13 @@ let coinState = {
 let reducer = (state, action) => {
   switch (action.type){
     case "Quarter":
-      return {...state, quarters: state.quarters + 1};
+      return {total: state.total + 0.25};
     case "Nickel":
-      return {...state, nickels: state.nickels + 1};
+      return {total: state.total + 0.05};
     case "Penny":
-      return {...state, pennies: state.pennies + 1};
+      return {total: state.total + 0.01};
     case "Dime":
-      return {...state, dimes: state.dimes + 1};
+      return {total: state.total + 0.10};
   }
 }
 
@@ -51,10 +48,7 @@ const storeForCoinSorter = redux(coinState, reducer)
 
 
 function render(stateArg){
-  quarters.innerHTML = stateArg.quarters
-  nickels.innerHTML = stateArg.nickels
-  pennies.innerHTML = stateArg.pennies
-  dimes.innerHTML = stateArg.dimes
+  total.innerHTML = stateArg.total
 }
 
 container.addEventListener('click', (e) => {
